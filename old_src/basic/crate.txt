@@ -1,0 +1,52 @@
+
+(1) 语句:
+    mod (声明自定义模块 / 创建新模块)
+        [1] 由于 `fn main` 属于当前模块的子成员, 
+            故 `mod` 声明语句应放在 `fn main` 外面才能引入其它子成员 
+
+        [2] 文件内声明模块
+            mod foo {
+                ...
+            }
+
+    use (使用模块)
+        [1]`use foo::bar;` 的可能情况:
+            (1) foo.rs 里的 bar mod
+            (2) foo.rs 里重导出的 foo/bar.rs
+            (3) foo/mod.rs 里的 bar
+            (4) foo/mod.rs 重导出的 bar.rs
+                (mod.rs 就相当于所在层级的 main.rs)
+
+            (1)(2) 是新的标准, (3)(4) 是旧的标准
+            两个同时出现会造成冲突
+
+        [2] 简化路径, 对所有::连接的层级结构都有效
+           ` use 路径1::路径2 as 新路径;`
+
+        [3] 嵌套路径
+            use std::{cmp::Ordering, io};
+
+            use std::io::{self, Write};
+
+        [4] 全引入
+            use std::collections::*;
+
+
+(2) 共有与私有
+    [1] crate 内的代码, 默认私有
+        但内部使用 pub 可公开某个属性
+
+    [2]
+        pub 结构体, 子字段默认私有
+        pub 枚举, 子字段默认公开
+
+(3) 路径 的前缀:
+        相对路径: 无
+        绝对路径: crate
+        父模块路径: super
+
+(4) 模块会隔绝作用域
+
+
+
+            

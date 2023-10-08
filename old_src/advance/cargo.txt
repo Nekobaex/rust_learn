@@ -1,0 +1,10 @@
+[profile.dev]
+    cargo build --dev 时使用的配置
+
+[profile.release]
+    --release
+
+opt-level = 0 ~ 3
+    一般优化等级, 数字越大, 优化程度越高, 编译时间越长
+    
+cargo doc --open

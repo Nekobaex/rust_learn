@@ -1,0 +1,25 @@
+[book]
+authors = ["baex"]
+language = "en"
+multilingual = false
+src = "book_src"
+title = "Rust 知识点整理"
+
+[rust]
+edition = "2021"
+
+
+[build]
+build-dir = "book_target"
+create-missing = true
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.playground]
+editable = true
+copyable = true
+copy-js = true
+line-numbers = true
+runnable = true

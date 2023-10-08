@@ -1,0 +1,50 @@
+循环
+    无限循环: loop {}
+    条件循环: while x {}
+
+    迭代用 for x in iter {}
+        简易范围迭代
+            范围 [1, 100): for i in 1..100 {}
+            范围 [1, 100]: for i in 1..=100 {}
+        向量迭代
+            引用向量: for v in vec.iter() {}
+            借用向量: for v in vec.iter_mut() {}
+            转移向量: for v in vec.into_iter() {}
+
+分支
+    if else 语句: if x {} else if x {} else
+
+    匹配 match x {}
+
+    解构: 
+        S {x} = s
+
+
+循环控制
+    break
+        终止 break
+        终止并返回值 break x
+    
+    continue
+        跳过一次当前 continue;
+    
+    标签
+        'label loop {}
+        'label while x {}
+        'label for x in iter {}
+
+        终止带标签的循环 break 'label
+        终止带标签的循环, 并返回值 break 'label x
+
+        跳过一次带标签的循环 continue 'label
+
+
+注意:
+    while, for, loop, if, match 作为表达式时, 
+        最后的 } 前面的返回值表达式, 可以不用加 ;
+        最后的 } 后面要加上 ;
+
+    for 和 if 后面的表达式, 不用带 ()
+
+    只有 += 没有 ++
+    

@@ -1,0 +1,30 @@
+(1) 3 个断言函数
+    assert!()
+    assert_eq!(,)
+    assert_ne!(,)
+
+    后面可以加上额外的参数, 用来传递给 format!(), 并输出错误信息
+
+(2) 3 个宏
+    #[cfg(test)]
+    #[test]
+    #[ignore]
+    #[should_panic]
+        #[should_panic(expected = "expected panic text")]
+
+(3) 也可以将 Result<(), E> 用于测试, 
+    但此时不能用 #[should_panic], 可以用 assert!(value.is_err()) 替代
+
+(4) 命令行参数
+    `cargo test --help` 获取 `cargo test` 的可用参数
+    `cargo test -- --help` 获取 传递给程序的可用参数
+
+    常用参数
+        `匹配词` 只会测试函数名称中包含 `匹配词` 的函数
+
+        -- --test-threads=1 单线程运行, 若不加, 则默认多线程并行运行
+        -- --show-output    显示一般输出, 如 println!()
+        -- --ignored
+        -- --include-ignored
+
+        --test `文件名` 在集成测试中, 只会测试某个文件, `文件名.rs`

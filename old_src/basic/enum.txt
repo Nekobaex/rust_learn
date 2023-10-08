@@ -1,0 +1,16 @@
+(1) 可用 use 导出内部成员, 如 Option 的 Some 和 None
+
+(2) 每个成员的类型相同
+
+(4) 成员只可指定 数字值, 或结构体
+
+(3) 系统自带的 enum: 
+    Option
+        Some(T)
+        None
+
+    Result
+        Ok(T)
+        Err(E)
+
+(4) 可以使用 match, if let, while let 解开获取内部的值

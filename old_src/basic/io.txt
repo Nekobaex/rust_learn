@@ -1,0 +1,12 @@
+一般
+println!("{foo}")
+
+特殊
+println!("{foo:?}");
+
+展开输出
+println!("{foo:#?}");
+
+结构体定义时加上 #[derive(Debug)] 
+, 才可以被 print 宏输出, 也可用 dbg!
+

@@ -1,0 +1,33 @@
+[todo 列表](./todo_list.md)
+
+# 环境与工具
+---
+- [rustup](./chapter/env&tools/rustup.md)
+- [cargo](./chapter/env&tools/cargo.md)
+  - [命令行](./chapter/env&tools/cargo/command_line.md)
+  - [配置](./chapter/env&tools/cargo/config.md)
+  - [项目结构](./chapter/env&tools/cargo/project.md)
+- [mdbook](./chapter/env&tools/mdbook.md)
+  - [命令行](./chapter/env&tools/mdbook/command_line.md)
+  - [配置](./chapter/env&tools/mdbook/config.md)
+  - [Markdown](./chapter/env&tools/mdbook/markdown_basic.md)
+# Rust 基础知识
+---
+- [数据类型与结构](./chapter/basic/datatype&struct.md)
+  - [基本](./chapter/basic/datatype&struct/basic_datatype.md)
+    - [数字](./chapter/basic/datatype&struct/basic_datatype/number.md)
+    - [字符](./chapter/basic/datatype&struct/basic_datatype/char.md)
+    - [bool](./chapter/basic/datatype&struct/basic_datatype/bool.md)
+    - [单元类型 unit](./chapter/basic/datatype&struct/basic_datatype/unit.md)
+    - [never](./chapter/basic/datatype&struct/basic_datatype/never.md)
+  - [复合](./chapter/basic/datatype&struct/composite_datatype.md)
+    - [元组 tuple](./chapter/basic/datatype&struct/composite_datatype/tuple.md)
+    - [数组 array](./chapter/basic/datatype&struct/composite_datatype/array.md)
+    - [序列 Range](./chapter/basic/datatype&struct/composite_datatype/range.md)
+    - [向量 Vec](./chapter/basic/datatype&struct/composite_datatype/vec.md)
+    - [切片 slice](./chapter/basic/datatype&struct/composite_datatype/slice.md)
+    - [字符串](./chapter/basic/datatype&struct/composite_datatype/str.md)
+  - [函数](./chapter/basic/datatype&struct/fn.md)
+  - [泛型](./chapter/basic/datatype&struct/generics.md)
+  - [转换](./chapter/basic/datatype&struct/datatype_transform.md)
+  - [自定义](./chapter/basic/datatype&struct/diy.md)

@@ -1,0 +1,8 @@
+(1) 可以直接使用 Ok() 或 Err(), 但要加上类型注解
+
+(2) 使用 .expect()/.unwrap()/.unwrap_or()/ 方法
+
+(3) ? 会直接 return 错误, 而不处理错误
+(4) ? 可以类似 js 一样. 链式调用
+
+(5) Err() 内可以放 Error, 也可以放 String
