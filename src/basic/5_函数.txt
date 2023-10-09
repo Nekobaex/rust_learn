@@ -1,0 +1,59 @@
+{} fn loop for if
+
+
+返回值
+    一般:
+        {} fn loop for if   // 可在最后, 不以 ; 结束, 而用单独的表达式 表示返回值
+        fn                  // 可用 return 语句
+        loop, for, if       // 可用 break 语句
+    特殊:
+        -> ()   // 无返回值
+        -> !    // 内部报错
+
+闭包
+    // 闭包面向流程, 函数面向结构
+    // 类型自动推导
+    // 获取引用
+
+    move    // 捕获所有权
+
+
+impl
+    // 实现某个 struct 的方法组
+
+    impl Color {
+        fn foo() {}
+        fn bar(&self) {}
+    }
+
+
+trait
+    trait Basic {}            // 类似 方法组的接口
+    trait Basic: Shape + Size // 可以继承
+
+    // 内部函数可只写签名, 也可以写完整
+    
+    // 可以定义类型别名, 常用于继承中
+
+    // impl 可以实现 trait, 但要实现所有函数和类型别名
+    impl Basic for Color {}
+
+    // 完全限定语法, 消除重复
+    <Basic as Shape>::do_something()
+
+dyn
+
+异步
+    async fn() {}
+
+    开始执行:
+        block_on()
+
+        .await   // 只能在异步函数内部使用
+        join!()  // 相当于同时对多个 异步函数使用 .await
+
+    立即执行异步块:
+        // 是一个表达式, 内部可用 return
+        async {
+            
+        }

@@ -1,8 +1,8 @@
 分类
     值类 (4)
-        ! / never
+        !   / never
 
-        () / unit
+        ()  / unit
 
         bool
         char
@@ -12,18 +12,19 @@
         f32, f64
 
     引用类 (3)
-        [type; len] / array
+        [type; len]         / array
         (type1, type2, ...) / tuple
-        &[range] / slice
+        &[range]            / slice
         str
 
-        fn
+        fn()    / fn
 
-        & (reference)
-        * (pointer)
+        &       / ref
+        *       / unref
 
 字面量
 
 转换
 
 别名
+    type int = i32;
