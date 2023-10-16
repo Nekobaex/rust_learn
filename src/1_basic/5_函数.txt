@@ -41,6 +41,9 @@ trait
     // 完全限定语法, 消除重复
     <Basic as Shape>::do_something()
 
+    // impl trait, 表示实现了 某个 trait 的类型
+    fn foo(ppp: impl Person)
+    
 dyn
 
 异步
